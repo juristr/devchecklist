@@ -1,0 +1,15 @@
+<md-list>
+  <md-item ng-repeat="checklist in vm.checklists">
+    <md-item-content>
+      <div class="md-tile-left"></div>
+      <div class="md-tile-content">
+        <h3>{{ checklist.title }}</h3>
+        <p>
+          {{ checklist.description }}
+          <br/>
+          <md-button class="md-primary">Open</md-button>
+        </p>
+      </div>
+    </md-item-content>
+  </md-item>
+</md-list>

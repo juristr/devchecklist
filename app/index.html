@@ -34,25 +34,8 @@
         <md-button>Right Bar Button</md-button>
       </div>
     </md-toolbar>
-    <md-content ng-controller="DashboardController as vm">
-
-      <md-list>
-        <md-item ng-repeat="checklist in vm.checklists">
-          <md-item-content>
-            <div class="md-tile-left">
-            </div>
-            <div class="md-tile-content">
-              <h3>{{ checklist.title }}</h3>
-              <p>
-                {{ checklist.description }}
-                <br/>
-                <md-button class="md-primary">Open</md-button>
-              </p>
-            </div>
-          </md-item-content>
-        </md-item>
-      </md-list>
-
+    <md-content>
+      <div ui-view></div>
     </md-content>
   </div>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -87,6 +70,7 @@
   <script src="bower_components/angular-aria/angular-aria.js"></script>
   <script src="bower_components/hammerjs/hammer.js"></script>
   <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -94,6 +78,9 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/dashboard/module.js"></script>
   <script src="scripts/dashboard/dashboard.controller.js"></script>
+
+  <script src="scripts/checklist/module.js"></script>
+  <script src="scripts/checklist/checklist.controller.js"></script>
   <!-- endbuild -->
 </body>
 </html>

@@ -1,0 +1,14 @@
+<md-content>
+    <section ng-repeat="section in vm.checklist.sections">
+        <md-subheader class="md-primary">{{ section.title }}</md-subheader>
+        <md-list layout="column">
+            <md-item ng-repeat="checkItem in section.checks">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">{{ checkItem.check }}</md-checkbox>
+                    </div>
+                </md-item-content>
+            </md-item>
+        </md-list>
+    </section>
+</md-content>
