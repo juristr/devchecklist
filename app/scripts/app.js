@@ -40,7 +40,12 @@ angular
         url: '/checklist',
         templateUrl: 'scripts/checklist/checklist.html',
         controller: 'ChecklistController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        resolve: {
+          checklist: function(checklistLoader){
+            return checklistLoader.loadChecklist('javascript-the-language');
+          }
+        }
       });
       // .state('state1.list', {
       //   url: "/list",
