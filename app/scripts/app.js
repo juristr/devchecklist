@@ -37,13 +37,13 @@ angular
         controllerAs: 'vm'
       })
       .state('checklist', {
-        url: '/checklist',
+        url: '/checklist/:datafile',
         templateUrl: 'scripts/checklist/checklist.html',
         controller: 'ChecklistController',
         controllerAs: 'vm',
         resolve: {
-          checklist: function(checklistLoader){
-            return checklistLoader.loadChecklist('javascript-the-language');
+          checklist: function($stateParams, checklistLoader){
+            return checklistLoader.loadChecklist($stateParams.datafile);
           }
         }
       });
