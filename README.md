@@ -1,6 +1,8 @@
 devchecklist
 ============
 
+[![Build Status](https://travis-ci.org/juristr/devchecklist.svg)](https://travis-ci.org/juristr/devchecklist)
+
 This project is about the idea to create a (potentially) community driven website for creating "checklists". A checklist is a series of "checks" related to a specific topic and are meant to help the developer to measure his knowledge in the given field. The final idea is to learn!
 
 ## Planned features
