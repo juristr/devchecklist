@@ -21,7 +21,8 @@ angular
 
     // features
     'dashboard',
-    'checklist'
+    'checklist',
+    'tests'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
 
@@ -46,6 +47,11 @@ angular
             return checklistLoader.loadChecklist($stateParams.datafile);
           }
         }
+      })
+      .state('test', {
+        url: '/test',
+        templateUrl: 'scripts/test/list.html',
+        controller: 'ListController'
       });
       // .state('state1.list', {
       //   url: "/list",

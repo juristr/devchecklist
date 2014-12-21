@@ -2,14 +2,14 @@
     "title": "JavaScript - The Language",
     "description": "JavaScript language basics.",
     "sections": [{
-        "title": "Section 1",
+        "title": "Syntax",
         "checks": [{
-            "check": "check 1"
+            "check": "if conditions"
         }, {
-            "check": "check 2"
+            "check": "loops"
         }]
     }, {
-        "title": "Section 2",
+        "title": "Advanced concepts",
         "checks": [{
             "check": "check 1"
         }, {
@@ -17,5 +17,14 @@
         }, {
             "check": "check 3"
         }]
+    }, {
+        "title": "Performance",
+        "checks": [{
+            "check": "How to optimize jQuery selectors o remain performant?"
+        },
+        {
+            "check": "How to scope selectors to containers in order to speed up searches"
+        }
+        ]
     }]
 }
