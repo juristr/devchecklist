@@ -13,12 +13,14 @@
                                 <md-checkbox ng-model="checkItem.checked" aria-label="Checkbox 1">{{ checkItem.check }}</md-checkbox>
                             </div>
                             <div flex>
-                                <md-switch ng-model="checkItem.showHints" aria-label="Switch 1">Show hints</md-switch>
-                                <ul ng-show="checkItem.showHints">
-                                    <li ng-repeat="hintItem in checkItem.hints">
-                                        <a ng-href="hintItem.url">{{ hintItem.hint }}</a>
-                                    </li>
-                                </ul>
+                                <md-switch ng-model="checkItem.showHints" aria-label="Switch 1" ng-show="checkItem.hints">Show hints</md-switch>
+                                <div class="hint"  ng-show="checkItem.showHints" flex layout-align="start start">
+                                    <ul>
+                                        <li ng-repeat="hintItem in checkItem.hints">
+                                            <a ng-href="{{ hintItem.link }}">{{ hintItem.hint }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </md-item-content>

@@ -26,9 +26,9 @@ angular
   ])
   .config(function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
-    $mdThemingProvider.theme('default')
-      .primaryColor('pink')
-      .accentColor('orange');
+    // $mdThemingProvider.theme('default')
+    //   .primaryColor('pink')
+    //   .accentColor('orange');
 
 
     // For any unmatched url, redirect to /state1
