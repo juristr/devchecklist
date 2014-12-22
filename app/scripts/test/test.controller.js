@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('tests', [])
+    angular.module('tests')
         .controller('ListController', ListController);
 
     function ListController($scope) {

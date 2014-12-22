@@ -24,10 +24,15 @@ angular
     'checklist',
     'tests'
   ])
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+
+    $mdThemingProvider.theme('default')
+      .primaryColor('pink')
+      .accentColor('orange');
+
 
     // For any unmatched url, redirect to /state1
-    $urlRouterProvider.otherwise("/dashboard");
+    $urlRouterProvider.otherwise('/dashboard');
     //
     // Now set up the states
     $stateProvider
@@ -49,9 +54,14 @@ angular
         }
       })
       .state('test', {
-        url: '/test',
+        url: '/test/list',
         templateUrl: 'scripts/test/list.html',
         controller: 'ListController'
+      })
+      .state('testSwitches', {
+        url: '/test/switches',
+        templateUrl: 'scripts/test/switches.html',
+        controller: 'SwitchController'
       });
       // .state('state1.list', {
       //   url: "/list",

@@ -8,8 +8,18 @@
             <md-list layout="column">
                 <md-item ng-repeat="checkItem in section.checks">
                     <md-item-content>
-                        <div class="md-tile-content">
-                            <md-checkbox ng-model="checkItem.checked" aria-label="Checkbox 1">{{ checkItem.check }}</md-checkbox>
+                        <div class="md-tile-content" layout="column">
+                            <div flex>
+                                <md-checkbox ng-model="checkItem.checked" aria-label="Checkbox 1">{{ checkItem.check }}</md-checkbox>
+                            </div>
+                            <div flex>
+                                <md-switch ng-model="checkItem.showHints" aria-label="Switch 1">Show hints</md-switch>
+                                <ul ng-show="checkItem.showHints">
+                                    <li ng-repeat="hintItem in checkItem.hints">
+                                        <a ng-href="hintItem.url">{{ hintItem.hint }}</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </md-item-content>
                 </md-item>

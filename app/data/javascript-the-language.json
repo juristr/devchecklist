@@ -6,7 +6,17 @@
         "checks": [{
             "check": "if conditions"
         }, {
-            "check": "loops"
+            "check": "loops",
+            "hints": [
+                {
+                    "hint": "this is the hint text",
+                    "link": "www.google.com"
+                },
+                {
+                    "hint": "another link",
+                    "link": "http://juristr.com"
+                }
+            ]
         }]
     }, {
         "title": "Advanced concepts",
